@@ -9,10 +9,12 @@ int main(){
     printf("ingrese un numero.");
     scanf("%d", &a);
 
-    for( int i = 0; i < a; a--){
+    for( int i = 0; i < a; i++){
 
-        factorial = a*a;
+       factorial += a*i;
     }
+
+    factorial++;
 
     printf("Hello world!\n %d", factorial);
     return 0;
