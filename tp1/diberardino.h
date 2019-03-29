@@ -38,4 +38,12 @@ float division (int a, int b);
 /**<  */
 int multiplicacion (int a, int b);
 
+/** \brief funcion para mostrar el menu de la calculadora
+ *
+ * \param
+ * \param
+ * \return el menu de la calculadora
+ *
+ */
+int mostrarMenu ();
 

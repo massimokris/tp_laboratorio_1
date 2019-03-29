@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1553744967 source:c:\users\massimo\desktop\tp1\tp_laboratorio_1\tp1\diberardino.c
+1553827895 source:c:\users\massimo\desktop\tp1\tp_laboratorio_1\tp1\diberardino.c
 	<stdio.h>
 	<stdlib.h>
 
-1553744943 source:c:\users\massimo\desktop\tp1\tp_laboratorio_1\tp1\main.c
+1553827813 source:c:\users\massimo\desktop\tp1\tp_laboratorio_1\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 
