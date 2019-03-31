@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "diberardino.h"
 
-//funcion para sumar entero
+//funcion para sumar dos enteros y devolver el resultado
 int suma (int a, int b){
 
     int suma;
@@ -11,7 +12,7 @@ int suma (int a, int b){
     return suma;
 }
 
-//funcion para restar enteros
+//funcion para restar dos enteros y devolver el resultado
 int resta (int a, int b){
 
     int resta;
@@ -21,17 +22,7 @@ int resta (int a, int b){
     return resta;
 }
 
-//funcion para dividir enteros
-float division (int a, int b){
-
-    float division;
-
-    division = a / b;
-
-    return division;
-}
-
-//funcion para multiplicar enteros
+//funcion para multiplicar dos enteros y devolver el resultado
 int multiplicacion (int a, int b){
 
     int multiplicacion;
@@ -41,19 +32,26 @@ int multiplicacion (int a, int b){
     return multiplicacion;
 }
 
-//funcion para calcular el factorial de un numero entero
-int factorial (int a){
+//funcion para dividir dos enteros y devolver el resultado
+float dividir (int a, int b){
 
-    int factorial;
+    int dividir;
 
-    for( int i = 1; i < a; i++){
+    dividir = a / b;
 
-        factorial = a*i;
+    return dividir;
+}
+
+//funcion para calcular el factorial de un entero y regresar el resultado
+long factorial(int a){
+
+    long factorial;
+
+    for(factorial = 1; a > 1; a--){
+
+        factorial *= a;
     }
-
-    factorial++;
 
     return factorial;
 }
-
 
