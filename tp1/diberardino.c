@@ -35,9 +35,9 @@ int multiplicacion (int a, int b){
 //funcion para dividir dos enteros y devolver el resultado
 float dividir (int a, int b){
 
-    int dividir;
+    float dividir;
 
-    dividir = a / b;
+    dividir = (float) a / b;
 
     return dividir;
 }

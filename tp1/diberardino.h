@@ -34,7 +34,7 @@ int multiplicacion (int a, int b);
  */
 float dividir (int a, int b);
 
-/** \brief funcion que recibe un enteros y calcula el factorial
+/** \brief funcion que recibe un entero y calcula el factorial
  *
  * \param entero uno
  * \return el resultado del factorial
