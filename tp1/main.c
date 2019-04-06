@@ -88,7 +88,16 @@ int main()
             printf("b) Calcular la resta (%d-%d) \n", num1, num2);
             printf("c) Calcular la division (%d/%d) \n", num1, num2);
             printf("d) Calcular la multiplicacion (%d*%d) \n", num1, num2);
-            printf("No es posible factorizar numeros negativos\n");
+            if(num1 < 0 && num2 < 0){
+
+                printf("No es posible factorizar numeros negativos\n");
+            }else if(num2 < 0){
+
+                printf("e) No se puede calcular el factorial de B porque es negativo, calcular el factorial de A (%li!)\n", factorial1);
+            }else{
+
+                printf("e) No se puede calcular el factorial de A porque es negativo,  calcular el factorial de B (%li!)\n", factorial2);
+            }
             break;
         }
 
@@ -127,7 +136,16 @@ int main()
             printf("b) El resultado de A-B es: %d\n", resultadoResta);
             printf("c) El resultado de A/B es: %f\n", resultadoDivision);
             printf("d) El resultado de A*B es: %d\n", resultadoMultiplicacion);
-            printf("No es posible factorizar numeros negativos\n");
+            if(num1 < 0 && num2 < 0){
+
+                printf("No es posible factorizar numeros negativos\n");
+            }else if(num2 < 0){
+
+                printf("e) No se puede calcular el factorial de B porque es negativo, el factorial de A es: %li\n", factorial1);
+            }else{
+
+                printf("e) No se puede calcular el factorial de A porque es negativo, el factorial de B es: %li\n", factorial2);
+            }
             break;
         //si no ingreso los parametros se muestra esto
         case 4:
@@ -158,8 +176,17 @@ int main()
             cambioOperando2 = 1;
             break;
         case 3:
-            //condicion que si alguno de los operandos es 0 no realice la division
-            if(num1 == 0 || num2 == 0){
+
+            //se calculan todas las operaciones
+            resultadoSuma = suma(num1, num2);
+            resultadoResta = resta(num1, num2);
+            resultadoMultiplicacion = multiplicacion(num1, num2);
+            resultadoDivision = dividir(num1, num2);
+            factorial1 = factorial(num1);
+            factorial2 = factorial(num2);
+
+            //condicion que si el divisor es 0 no realice la division
+            if(num2 == 0){
 
                 cambioCalculos = 2;
             }else{
@@ -169,12 +196,6 @@ int main()
                     cambioCalculos = 5;
                 }else{
                     //si los dos numeros son enteros mayores a 0 realiza todas las operaciones
-                    resultadoSuma = suma(num1, num2);
-                    resultadoResta = resta(num1, num2);
-                    resultadoMultiplicacion = multiplicacion(num1, num2);
-                    resultadoDivision = dividir(num1, num2);
-                    factorial1 = factorial(num1);
-                    factorial2 = factorial(num2);
                     cambioCalculos = 1;
                 }
             }
