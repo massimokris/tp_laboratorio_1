@@ -32,9 +32,7 @@ int menuABM (void){
     printf("5- Mostrar empleados\n");
     printf("6- Salir\n");
 
-    printf("\n\nIngrese una opcion:\n");
-    fflush(stdin);
-    scanf("%d", &opcion);
+    getInt("\n\nIngrese una opcion: \n", "\n\nError, reingrese una opcion: \n", &opcion, 1, 6);
 
     return opcion;
 }
@@ -120,10 +118,8 @@ void addEmployee (eEmployee* list, int len){
         fflush(stdin);
         gets(list[empty].lastname);
 
-        getFloat(&list[empty].salary, "Ingrese sueldo: \n", "Error, reingrese sueldo: \n");
+        getFloat(&list[empty].salary, "Ingrese sueldo: \n", "Error, reingrese sueldo: \n", 1, 100000);
 
-        printf("Ingrese sector: \n");
-        scanf("%d", &list[empty].sector);
         getInt("Ingrese sector: \n", "Error, reingrese sector", &list[empty].sector, 1, 5);
     }
 }
@@ -332,8 +328,7 @@ void reports (eEmployee* list, int len, eSector* sectors, int lenSec){
         printf("***** INFORMES *****\n");
         printf("1- Ordenar empleados\n");
         printf("2- Salario total, promedio y mayor al promedio\n\n");
-        printf("Ingrese una opcion\n");
-        scanf("%d", &auxInt);
+        getInt("Ingrese una opcion: \n", "Error, reingrese una opcion: \n", &auxInt, 1, 2);
 
         switch(auxInt){
 
@@ -414,8 +409,7 @@ void changeSalary (eEmployee* list, int len, int id){
     float auxFloat;
 
     system("cls");
-    printf("Ingrese nuevo salario del empleado: \n");
-    scanf("%f", &auxFloat);
+    getFloat(&auxFloat, "Ingrese nuevo salario del empleado: \n", "Error, reingrese nuevo salario del empleado: \n", 1, 100000);
 
     for(int i = 0; i < len; i++){
 
@@ -435,8 +429,7 @@ void changeSector (eEmployee* list, int len, int id){
     int auxInt;
 
     system("cls");
-    printf("a cual sector desea cambiar al empleado ?\n");
-    scanf("%d", &auxInt);
+    getInt("A cual sector desea cambiar el empleado ?\n", "Error, reingrese un sector valido: \n", &auxInt, 1, 5);
 
     for(int i = 0; i < len; i++){
 

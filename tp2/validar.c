@@ -10,7 +10,7 @@ int validarInt (char* cad, int* num, int min, int max){
 
     int validar = 0;
 
-    if(atoi(cad) != 0 && (atoi(cad) > min && atoi(cad) < max)){
+    if(atoi(cad) != 0 && (atoi(cad) >= min && atoi(cad) <= max)){
 
         *num = atoi(cad);
         validar = 1;
@@ -25,7 +25,6 @@ int getInt (char* mes, char* emes, int* num, int min, int max){
     int i = 0;
     int validar;
 
-    system("cls");
     printf("%s\n", mes);
     fflush(stdin);
     scanf("%s", auxnum);
@@ -41,7 +40,6 @@ int getInt (char* mes, char* emes, int* num, int min, int max){
             break;
         }
 
-        system("cls");
         printf("%s\n", emes);
         fflush(stdin);
         scanf("%s", auxnum);
@@ -53,7 +51,7 @@ int getInt (char* mes, char* emes, int* num, int min, int max){
     return *num;
 }
 
-int getFloat(float* num,char mes[],char emes[]){
+int getFloat(float* num,char mes[],char emes[], int min, int max){
 
     int validar=1;
     int isFloat=0;
@@ -65,7 +63,7 @@ int getFloat(float* num,char mes[],char emes[]){
     printf("%s : ", mes);
     fflush(stdin);
     scanf("%s", auxNum);
-    isFloat = validarFloat(auxNum);
+    isFloat = validarFloat(auxNum, min, max);
 
     if(isFloat){
 
@@ -87,7 +85,7 @@ int getFloat(float* num,char mes[],char emes[]){
         printf("%s : ", emes);
         fflush(stdin);
         scanf("%s", auxNum);
-        isFloat=validarFloat(auxNum);
+        isFloat=validarFloat(auxNum, min, max);
 
         if(isFloat){
 
@@ -101,7 +99,7 @@ int getFloat(float* num,char mes[],char emes[]){
     return validar;
 }
 
-int validarFloat(char auxNum[]){
+int validarFloat(char auxNum[], int min, int max){
 
    int i=0;
    int validar = 1;
@@ -122,6 +120,11 @@ int validarFloat(char auxNum[]){
            validar = 0;
        }
        i++;
+   }
+
+   if(atof(auxNum) < min || atof(auxNum) > max){
+
+        validar = 0;
    }
    return validar;
 }

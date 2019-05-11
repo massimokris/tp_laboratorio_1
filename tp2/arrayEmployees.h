@@ -184,3 +184,70 @@ int getEmployees (eEmployee* list, int len);
  *
  */
 void reports (eEmployee* list, int len, eSector* sectors, int lenSec);
+
+/** \brief funcion de menu de cambios
+ *
+ * \param list eEmployee* la estructura de empleados
+ * \param len int el tamanio del array de estructuras
+ * \param id del empleado a cambiar
+ * \return void
+ *
+ */
+void changesMenu (eEmployee* list, int len, int id);
+
+/** \brief funcion para cambiar nombre
+ *
+ * \param list eEmployee* la estructura de empleados
+ * \param len int el tamanio del array de estructuras
+ * \param id del empleado a cambiar
+ * \return void
+ *
+ */
+void changeName (eEmployee* list, int len, int id);
+
+/** \brief funcion para cambiar apellido
+ *
+ * \param list eEmployee* la estructura de empleados
+ * \param len int el tamanio del array de estructuras
+ * \param id del empleado a cambiar
+ * \return void
+ *
+ */
+ void changeLastname (eEmployee* list, int len, int id);
+
+ /** \brief funcion para cambiar salario
+ *
+ * \param list eEmployee* la estructura de empleados
+ * \param len int el tamanio del array de estructuras
+ * \param id del empleado a cambiar
+ * \return void
+ *
+ */
+ void changeSalary (eEmployee* list, int len, int id);
+
+ /** \brief funcion para cambiar sector
+ *
+ * \param list eEmployee* la estructura de empleados
+ * \param len int el tamanio del array de estructuras
+ * \param id del empleado a cambiar
+ * \return void
+ *
+ */
+ void changeSector (eEmployee* list, int len, int id);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

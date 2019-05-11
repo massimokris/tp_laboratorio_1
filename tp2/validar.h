@@ -29,16 +29,20 @@ int validarInt (char* cad, int* num, int min, int max);
  * \param mensaje que muestra al pedir
  * \param mensaje de error
  * \param puntero al numero que desea darle valor
+ * \param valor minimo del entero a ingresar
+ * \param valor maximo del entero a ingresar
  * \return validacion si se puso cambiar
  *
  */
-int getFloat(float* input,char mes[],char emes[]);
+int getFloat(float* input,char mes[],char emes[], int min, int max);
 
 
 /** \brief funcion para validar un float
  *
  * \param cadena a validar y pasar a float
- * \return
+ * \param valor minimo del entero a ingresar
+ * \param valor maximo del entero a ingresar
+ * \return validacion si lo pudo pasar o no
  *
  */
-int validarFloat(char auxNum[]);
+int validarFloat(char auxNum[], int min, int max);
