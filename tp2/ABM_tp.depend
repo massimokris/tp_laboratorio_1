@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1557542755 source:c:\users\massimo\desktop\abm_tp\arrayemployees.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<ctype.h>
+	<string.h>
+	"arrayEmployees.h"
+	"validar.h"
+
+1557118754 source:c:\users\massimo\desktop\abm_tp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<ctype.h>
+	<string.h>
+	"arrayEmployees.h"
+
+1557119046 c:\users\massimo\desktop\abm_tp\arrayemployees.h
+
+1557542820 source:c:\users\massimo\desktop\abm_tp\validar.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+	"validar.h"
+
+1557542820 c:\users\massimo\desktop\abm_tp\validar.h
+
